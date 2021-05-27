@@ -26,4 +26,7 @@ const pushNote = {
 
 notes.push(pushNote)
 
-console.log(notes)
+for (const note of notes) {
+    console.log(`${note.date}
+    I learned ${note.subject} today. After spending ${note.timeSpent} minutes on it, my final thoughts are: ${note.feeling}.`)
+}
