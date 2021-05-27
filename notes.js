@@ -26,7 +26,15 @@ const pushNote = {
 
 notes.push(pushNote)
 
+// for (const note of notes) {
+//     console.log(`${note.date}
+//     I learned ${note.subject} today. After spending ${note.timeSpent} minutes on it, my final thoughts are: ${note.feeling}.`)
+// }
+
+const findNote = 2
 for (const note of notes) {
-    console.log(`${note.date}
+    if (note.id === findNote) {
+        console.log(`${note.date}
     I learned ${note.subject} today. After spending ${note.timeSpent} minutes on it, my final thoughts are: ${note.feeling}.`)
+    }
 }
