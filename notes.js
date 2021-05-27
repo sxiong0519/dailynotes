@@ -31,10 +31,37 @@ notes.push(pushNote)
 //     I learned ${note.subject} today. After spending ${note.timeSpent} minutes on it, my final thoughts are: ${note.feeling}.`)
 // }
 
-const findNote = 2
+// const findNote = 2
+// for (const note of notes) {
+//     if (note.id === findNote) {
+//         console.log(`${note.date}
+//     I learned ${note.subject} today. After spending ${note.timeSpent} minutes on it, my final thoughts are: ${note.feeling}.`)
+//     }
+// }
+
+const addNewNote = (noteObject) => {
+    const lastIndex = notes.length - 1
+    const currentLastNote = notes[lastIndex]
+    const maxId = currentLastNote.id
+    const idNewNote = maxId + 1
+
+noteObject.id = idNewNote
+notes.push(noteObject)
+}
+
+const addNewNotes = {
+    subject: "adding new notes",
+    date: "May 27, 2021",
+    feeling: "I am unsure if I will ever remember this code. It's a hard concept to grasp and to remember. I'm still having to refer back to the example for assistance, but I do understand why this needs to be done.",
+    timeSpent: 75
+}
+
+addNewNote(addNewNotes)
+
+console.log(notes)
+
 for (const note of notes) {
-    if (note.id === findNote) {
-        console.log(`${note.date}
+    console.log(`${note.date}
     I learned ${note.subject} today. After spending ${note.timeSpent} minutes on it, my final thoughts are: ${note.feeling}.`)
-    }
+    
 }
